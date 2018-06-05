@@ -1,0 +1,6 @@
+int a = 1;
+int b = 2;
+
+bot.Move(a);
+bot.Turn("left");
+bot.Move(b);

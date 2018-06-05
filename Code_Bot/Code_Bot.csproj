@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9C74D85-F95C-4E83-A643-D9EC057ABFCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Code_Bot</RootNamespace>
+    <AssemblyName>Code_Bot</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Code_Bot.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Bot_Up.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Nevron.Nov.Barcode, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Chart, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Diagram, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Diagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Grid, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Host.WinBase, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Host.WinBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Host.WinForm, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Host.WinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Host.Wpf, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Host.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Presentation, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Schedule, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.Text, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.WinFormControls, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.WinFormControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Nov.WpfControls, Version=17.5.29.12, Culture=neutral, PublicKeyToken=b33b1a04bb5ca8ad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nevron.Nov.Diagram.17.5.29.12\lib\net40\Nevron.Nov.WpfControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Instructions\Debreifing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\Debreifing.Designer.cs">
+      <DependentUpon>Debreifing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I10.Designer.cs">
+      <DependentUpon>I10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I3.Designer.cs">
+      <DependentUpon>I3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I1.Designer.cs">
+      <DependentUpon>I1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I2.Designer.cs">
+      <DependentUpon>I2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I4.Designer.cs">
+      <DependentUpon>I4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I5.Designer.cs">
+      <DependentUpon>I5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I6.Designer.cs">
+      <DependentUpon>I6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I7.Designer.cs">
+      <DependentUpon>I7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I8.Designer.cs">
+      <DependentUpon>I8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\I9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\I9.Designer.cs">
+      <DependentUpon>I9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions\ParentInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions\ParentInstructions.Designer.cs">
+      <DependentUpon>ParentInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L1.Designer.cs">
+      <DependentUpon>L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L10.Designer.cs">
+      <DependentUpon>L10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L2.Designer.cs">
+      <DependentUpon>L2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L3.Designer.cs">
+      <DependentUpon>L3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L4.Designer.cs">
+      <DependentUpon>L4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L5.Designer.cs">
+      <DependentUpon>L5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L6.Designer.cs">
+      <DependentUpon>L6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L7.Designer.cs">
+      <DependentUpon>L7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L8.Designer.cs">
+      <DependentUpon>L8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\L9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\L9.Designer.cs">
+      <DependentUpon>L9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ErrorChecker.cs" />
+    <Compile Include="Logic\Interpreter.cs" />
+    <Compile Include="Logic\StoredVar.cs" />
+    <Compile Include="Props\WallBuild.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Props\Bot.cs" />
+    <Compile Include="Levels\Demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Props\Exit.cs" />
+    <Compile Include="Levels\ParentLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\ParentLevel.Designer.cs">
+      <DependentUpon>ParentLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\PossitionConvert.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logic\Reader.cs" />
+    <Compile Include="Props\Wall.cs" />
+    <EmbeddedResource Include="Instructions\Debreifing.resx">
+      <DependentUpon>Debreifing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I1.resx">
+      <DependentUpon>I1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I10.resx">
+      <DependentUpon>I10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I2.resx">
+      <DependentUpon>I2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I3.resx">
+      <DependentUpon>I3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I4.resx">
+      <DependentUpon>I4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I5.resx">
+      <DependentUpon>I5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I6.resx">
+      <DependentUpon>I6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I7.resx">
+      <DependentUpon>I7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I8.resx">
+      <DependentUpon>I8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\I9.resx">
+      <DependentUpon>I9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions\ParentInstructions.resx">
+      <DependentUpon>ParentInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L1.resx">
+      <DependentUpon>L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L10.resx">
+      <DependentUpon>L10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L2.resx">
+      <DependentUpon>L2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L3.resx">
+      <DependentUpon>L3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L4.resx">
+      <DependentUpon>L4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L5.resx">
+      <DependentUpon>L5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L6.resx">
+      <DependentUpon>L6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L7.resx">
+      <DependentUpon>L7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L8.resx">
+      <DependentUpon>L8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\L9.resx">
+      <DependentUpon>L9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\ParentLevel.resx">
+      <DependentUpon>ParentLevel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bot_Up.ico" />
+    <None Include="Resources\path to win.png" />
+    <None Include="Resources\IncrementingLoop.png" />
+    <None Include="Resources\YAxis.png" />
+    <None Include="Resources\XAxis.png" />
+    <None Include="Resources\Wall.bmp" />
+    <None Include="Resources\Method.bmp" />
+    <None Include="Resources\MethodWithParameters.bmp" />
+    <None Include="Resources\Grid.bmp" />
+    <None Include="Resources\Exit.bmp" />
+    <None Include="Resources\BotUp.bmp" />
+    <None Include="Resources\BotRight.bmp" />
+    <None Include="Resources\BotLeft.bmp" />
+    <None Include="Resources\BotDown.bmp" />
+    <None Include="Resources\BlackSquare.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

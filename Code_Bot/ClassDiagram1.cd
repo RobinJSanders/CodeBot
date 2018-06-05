@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Code_Bot.Program">
+    <Position X="1.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.ParentLevel">
+    <Position X="8.75" Y="1.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="Code_Bot.Levels.ParentLevel.ScrollBarType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Levels\ParentLevel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Code_Bot.Levels.ParentLevel.Message" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Levels\ParentLevel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Code_Bot.Levels.ParentLevel.ScrollBarCommands" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Levels\ParentLevel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAwBEAZFWCaCAAAAgGCQIiBCTAAAIAgCSIABAGCCRAw=</HashCode>
+      <FileName>Levels\ParentLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I1">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIhAAACAAABAAAACAAAACAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>Instructions\I1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I2" Collapsed="true">
+    <Position X="16" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Instructions\I2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I3" Collapsed="true">
+    <Position X="17.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>Instructions\I3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I4" Collapsed="true">
+    <Position X="14.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>Instructions\I4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I5" Collapsed="true">
+    <Position X="16" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Code_Bot.Instructions.ParentInstructions" ManuallyRouted="true">
+      <Path>
+        <Point X="16.5" Y="3.896" />
+        <Point X="16.5" Y="4.875" />
+        <Point X="15.75" Y="4.875" />
+        <Point X="15.75" Y="6.096" />
+        <Point X="16.75" Y="6.096" />
+        <Point X="16.75" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIBAAACAAABAAAACAAAACAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>Instructions\I5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I6" Collapsed="true">
+    <Position X="17.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEAAACAAAACAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Instructions\I6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.I7" Collapsed="true">
+    <Position X="14.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAQAABAAAA=</HashCode>
+      <FileName>Instructions\I7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Instructions.ParentInstructions">
+    <Position X="15.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAOAAAAAAAAA=</HashCode>
+      <FileName>Instructions\ParentInstructions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.Demo" Collapsed="true">
+    <Position X="3.75" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="Code_Bot.Levels.ParentLevel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="12.438" />
+        <Point X="8.678" Y="12.438" />
+        <Point X="8.678" Y="11.346" />
+        <Point X="4.5" Y="11.346" />
+        <Point X="4.5" Y="11.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACCAAJAAESAEAAAoAICAIAACAAAAAAAACAAAAIAAQAA=</HashCode>
+      <FileName>Levels\Demo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L1">
+    <Position X="1.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAQ=</HashCode>
+      <FileName>Levels\L1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L2" Collapsed="true">
+    <Position X="5.25" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="Code_Bot.Levels.ParentLevel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="12.75" />
+        <Point X="8.678" Y="12.75" />
+        <Point X="8.678" Y="11.418" />
+        <Point X="6" Y="11.418" />
+        <Point X="6" Y="11.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAQ=</HashCode>
+      <FileName>Levels\L2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L3" Collapsed="true">
+    <Position X="6.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQEA=</HashCode>
+      <FileName>Levels\L3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L4" Collapsed="true">
+    <Position X="3.75" Y="11.5" Width="1.5" />
+    <InheritanceLine Type="Code_Bot.Levels.ParentLevel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="12.75" />
+        <Point X="8.678" Y="12.75" />
+        <Point X="8.678" Y="12.345" />
+        <Point X="6.083" Y="12.345" Type="JumpStart" />
+        <Point X="5.917" Y="12.345" Type="JumpEnd" />
+        <Point X="4.5" Y="12.345" />
+        <Point X="4.5" Y="12.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Levels\L4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L5" Collapsed="true">
+    <Position X="5.25" Y="11.5" Width="1.5" />
+    <InheritanceLine Type="Code_Bot.Levels.ParentLevel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="12.5" />
+        <Point X="6" Y="12.5" />
+        <Point X="6" Y="12.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Levels\L5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L6" Collapsed="true">
+    <Position X="6.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Levels\L6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Logic.ErrorChecker">
+    <Position X="11.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAACAA=</HashCode>
+      <FileName>Logic\ErrorChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Logic.Interpreter">
+    <Position X="13.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAACgAAIAAAAQAABAABAAAAACQAACAAAAAAAAA=</HashCode>
+      <FileName>Logic\Interpreter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Logic.PositionConvert">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAEAAA=</HashCode>
+      <FileName>Logic\PossitionConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Logic.Reader">
+    <Position X="11.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQMAwAAGCRAEAgBAAERggg4AAAIEEAAAUAQAAACEIAE=</HashCode>
+      <FileName>Logic\Reader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Logic.StoredVar">
+    <Position X="16" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Logic\StoredVar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Properties.Resources">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggAAAgABAAAAAAAAAAQhEAAAAQQAIBQAIAAIAAAAQIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Properties.Settings">
+    <Position X="1.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Props.Bot">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DCYAgAAAAYAQACAIAQACCAAQEAIAAgAEAAAAEIgAEAA=</HashCode>
+      <FileName>Props\Bot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Props.Exit">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAE=</HashCode>
+      <FileName>Props\Exit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Props.Wall">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Props\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Levels.L7" Collapsed="true">
+    <Position X="3.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Levels\L7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Bot.Props.WallBuild">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Props\WallBuild.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

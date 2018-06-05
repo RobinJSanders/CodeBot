@@ -1,0 +1,9 @@
+int a = 1;
+int b = 2;
+string l = "left";
+string r = "right";
+
+bot.Move(1);
+bot.Turn("left");
+bot.Move(b);
+bot.Turn(r);

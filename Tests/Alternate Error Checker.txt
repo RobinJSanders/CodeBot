@@ -1,0 +1,195 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Code_Bot.Logic
+{
+    public class ErrorChecker : Logic.Reader
+    {
+        public ErrorChecker(string input, Props.Bot bot, Levels.ParentLevel form) : base(input, bot, form)
+        {
+            reset();
+            while (_postText != "")
+            {
+                nextLine();
+                findError();
+                _preIndex += _currentLine.Length + 1;
+                if (_postText != "")
+                    _preText = _inputText.Substring(0, _preIndex);
+            }
+        }
+
+        public bool HasError()
+        {
+            return _error;
+        }
+        private void findError()
+        {//Stops the program continuing, and displays an error message if an error is found        
+         //Check _currentLine for error
+            if (_regexMethod.IsMatch(_currentLine))
+            {
+                List<string> objects = new List<string>(new string[] { "bot" });//there may be more than one interactable object in future updates
+                List<string> methods = new List<string>();
+                List<string> parameters = new List<string>();
+
+                splitMethod(_currentLine);
+
+                if (_object == "bot")
+                {
+                    methods = new List<string>(new string[] { "Move", "Turn" });
+                    if (_method == "Turn")
+                    {
+                        parameters = new List<string>(new string[] { "\"left\"", "\"right\"" });
+                        if (!parameters.Contains(_parameter))
+                            errorMessage("Invalid parameter for 'Turn': " + _parameter + "\nCommands are case sensitive and string parameters must be in quotes\nTry: 'bot.Turn(\"left\");' or 'bot.Turn(\"right\");' .\n", _lineNo);
+                    }
+                    else if (_method == "Move")
+                    {
+                        Regex integer = new Regex(@"^[0-9]*$");
+                        if (!integer.IsMatch(_parameter))
+                            errorMessage("Invalid parameter for 'Move': " + _parameter + "\nThe parameter for 'Move' must be an integer: \nThere must be a whole number with out symbols or letters between the brackets: '(' ')'.\n", _lineNo);
+                    }
+                }
+                else if (!objects.Contains(_object))
+                {
+                    errorMessage("Invalid object: " + _object + ".\n", _lineNo);
+                    if (Regex.IsMatch(_object, "[a-z]"))
+                    {
+                        errorMessage("\nObjects do not contain capital letters.\n", _lineNo - 1);
+
+                    }
+                }
+                if (!methods.Contains(_method))
+                {
+                    errorMessage("Invalid method: " + _method + ".\n", _lineNo);
+                    if (!Regex.IsMatch(_method, "^[A-Z]"))
+                    {
+                        errorMessage("\nPublic Methods begin with capital letters.\n", _lineNo - 1);
+
+                    }
+                }
+            }
+
+            else if (_currentLine.Contains("Move") || _currentLine.Contains("Turn"))
+            {//check if method is typed correctly
+                if (!_currentLine.Contains('(') || !_currentLine.Contains(')'))
+                    errorMessage("You must use  2 brackets: '(' and ')' in a method.\n", _lineNo);
+                else if (!_currentLine.EndsWith(";"))
+                    errorMessage("You must end this line with a semicolon ;.\n", _lineNo);
+                else if (_currentLine.StartsWith("bot") && !_currentLine.StartsWith("bot."))
+                {
+                    errorMessage("You must differentiate the object from the method\n 'bot' and '" + _currentLine.Substring(3, _currentLine.Length - 3) + " must be seperated with a '.'.\n", _lineNo);
+                }
+                else if (!_currentLine.Contains(".") || _currentLine.StartsWith("."))
+                {
+                    string substring;
+                    if (_currentLine.StartsWith("."))
+                        substring = _currentLine.Substring(1, _currentLine.Length - 1);
+                    else
+                        substring = _currentLine;
+                    errorMessage("Missing object to '" + substring + "' try: bot." + substring + ".\n", _lineNo);
+                }
+                else errorMessage("Syntax Error: '" + _currentLine +"'\nYou may have some extra or missing charecters.\n"  , _lineNo);
+            }
+            else if (_currentLine.StartsWith("loop"))
+            {
+                string loopvalue = _currentLine.Split('(', ')')[1];
+                Int16 number;
+                if (!Int16.TryParse(loopvalue, out number))
+                    errorMessage("The loop parameter must be an integer: \nThere must be a whole number wihout symbols or letters between the brackets '(' ')'.\n", _lineNo);
+                else if (!_currentLine.Contains('(') || !_currentLine.Contains(')'))
+                    errorMessage("You must use 2 brackets: '(' ')' in a loop.\n", _lineNo);
+                else if (_currentLine.Contains(";"))
+                    errorMessage("loop statements must not contain semicolon ';'.\n", _lineNo);
+            }
+            else if (_currentLine != "" && !_currentLine.Contains("{") && !_currentLine.Contains("{"))
+            {
+                errorMessage("Unrecognised Command: '" + _currentLine + "'\nRemember that commands are case sensitive!", _lineNo);
+            }
+
+            if (_currentLine.Contains("}") || _currentLine.Contains("{"))
+            {
+                if (_currentLine != "}" && _currentLine != "{")
+                    errorMessage("Lines with Braces '{' or '}' must contain 1 brace and nothing else.\n", _lineNo);
+                else if (!_inputText.Contains("loop") || !_preText.Contains("loop"))
+                {
+                    if (_currentLine == "{")
+                        errorMessage("Unnecessary brace: '{'.\n", _lineNo);
+                    else
+                        errorMessage("Unnecessary brace: '}'.\n", _lineNo);
+                }
+            }
+
+            //Check _inputText for error
+            if (_postText.StartsWith("loop"))
+            {
+                if (!_postText.Contains('}'))
+                    errorMessage("The body of the loop must be closed with a closing brace: '}'\nor the program wont know what is inside or outside the loop.\n", _lineNo + 1);
+                if (_postText.Contains(")"))
+                {
+                    int index = _postText.IndexOf(')');
+                    string substring = _postText.Substring(index, 3);
+                    if (substring != ")\n{" || !_postText.StartsWith("loop("))
+                        errorMessage("The body of the loop must be declaired under the loop statement as follows:\nloop(<number>)\n{\n//code here\n}.\n", _lineNo + 1);
+                }
+                else
+                {
+                    errorMessage("closing bracket ')' required.\n", _lineNo + 1);
+                }
+
+            }
+            else if (_postText.StartsWith("{") && _postText.Contains("}"))
+            {
+                int index = _postText.IndexOf('}');
+                string substring = _postText.Substring(1, index - 1);
+                if (substring.Contains('{'))
+                    errorMessage("use only 1 opening brace '{' within a loop.\n", _lineNo + 1);
+                if (substring.Contains("loop"))
+                    errorMessage("Nested loops (loops witin loops) may not be used in Code_Bot.\n", _lineNo + 1);
+            }
+            else if (_postText.StartsWith("}"))
+            {
+                string substring;
+                if (_postText.Contains("loop"))
+                    substring = _postText.Substring(1, _postText.IndexOf("loop") - 1);
+                else
+                    substring = _postText.Substring(1, _postText.LastIndexOf("\n"));
+                if (_preText.Contains("loop"))
+                {
+                    if (substring.Contains('}') && substring.Contains('{'))
+                        errorMessage("unneccessary closing and opening braces: '{' '}' (below this line).\n", _lineNo + 1);
+                    else if (substring.Contains('}'))
+                        errorMessage("unneccessary closing brace(s): '}' (below this line).\n", _lineNo + 1);
+                    else if (substring.Contains('{'))
+                        errorMessage("unneccessary opening brace(s): '{' (below this line).\n", _lineNo + 1);
+                }
+            }
+        }
+
+        private void errorMessage(string message, int lineNo)
+        {
+            if (!_error)
+                MessageBox.Show("Whoops, looks like there are some errors in your code!\nCheck the error textbox for details.\n",
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1);
+            _error = true;
+            int lineCount = _errorText.Count(x => x == '\n') + 2;
+            string linesToAdd = "\n";
+            for (int i = 0; i < lineCount; i++)
+                linesToAdd += "\n";
+            _form.RtfOutputLineNumbers.Text += Convert.ToString(lineNo) + linesToAdd;
+            _form.RtfOutput.Text += message + "\n";
+        }
+
+
+    }
+}
+
+
+

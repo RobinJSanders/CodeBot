@@ -1,0 +1,3 @@
+- added ability to increment and decrtement int variables with ++ or --
+- changed a few regexes and fixed some bugs
+- changed "output" string on parent form to "log" 

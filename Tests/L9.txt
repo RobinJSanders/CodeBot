@@ -1,0 +1,10 @@
+int i = 8;
+string s = "right";
+bot.Move(i);
+bot.Turn(s);
+i=7;
+s="left";
+bot.Move(i);
+bot.Turn(s);
+i=3;
+bot.Move(i);

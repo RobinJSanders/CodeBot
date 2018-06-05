@@ -1,0 +1,7 @@
+bot.Move();
+loop(5)
+{
+bot.Move();
+bot.Turn("left");
+}
+bot.Move();

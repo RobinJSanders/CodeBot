@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Great Job! Looks like you are really getting the hang of this looping thing.
+
+Hmm… this looks familiar, looks like you are going to have to do the same thing again!
+
+Have no fear, I recorded the code you used last time and replicated something similar. 
+
+While we are here I’ll introduce you to something new. They store strings and integers and they are called variables!
+
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Variables are values that are stored and can used and changed later on. The name of the variable can pretty much whatever you want as long as the value matches the type.
+
+‘int i =1;’ will work but ‘int l = “left;”’ will not. 
+‘string foo = “right”;’ will work but ‘string foo = 1;’ will not.
+
+You may then put one of these variable names in the method parameter.
+
+Most of this level has been done for you, just type 'l' or 'r' between the brackets for each bot.Turn() method. because the string named 'l' has the value of "left", you may use 'bot.Turn(l);' to turn the bot left. The same applies for "right" and 'r'.
+ 
+You will see ‘int short =’ and ‘int long =’ 
+
+After ‘int short=’, you should type an integer representing the number of spaces the bot moves up before needing to move horizontally followed by a semicolon.
+
+After ‘int long=’, you should type an integer representing the number of spaces the bot moves horizontally before needing to move up followed by a semicolon.
+</value>
+  </data>
+</root>

@@ -1,0 +1,5 @@
+bot.Turn("left");
+bot.Turn("left");
+bot.Move();
+bot.Turn("right");
+bot.Move(10);
